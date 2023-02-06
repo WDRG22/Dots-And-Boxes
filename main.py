@@ -1,5 +1,6 @@
-from board import Board
-from player import Player
+from game import Game
+
+
 # Dimensions will be doubled then incremented by one, as we will use a 2D Matrix to represent the board,
 # where an n-by-n board will have row and column indices representing either:
 # 0: dot, 1: space/line, 2: dot, 3: space/line, 4: dot, etc OR
@@ -18,11 +19,18 @@ def main():
             if x < 2 or y < 2 or plies < 2:
                 print("Dimension and ply values must be 2 or greater")
             else:
-                break
-                    
-    board = Board()                    
-    player = Player(board)                    
-    computer = Player(board)
+                break        
+    newGame = Game(3, 3)
+    newGame.start()
+        
 
 if __name__ == "__main__":
     main()
+
+
+# Testing
+from player import Player
+from board import Board
+
+newGame = Game(3, 3)
+newGame.start()
