@@ -11,16 +11,16 @@ def main():
     print("Welcome to Dots and Boxes!")
     print("Define the board size to begin: ")
 
-    while True:
-            x = int(input("Input X-Dimension (2 or greater): "))
-            y = int(input("Input Y-Dimension (2 or greater): "))
-            plies = int(print("Now, set the difficult of your AI Competitor by declaring how many plies ahead it will compute: "))
-            # Write string input validation
-            if x < 2 or y < 2 or plies < 2:
-                print("Dimension and ply values must be 2 or greater")
-            else:
-                break        
-    newGame = Game(3, 3)
+    # while True:
+    #         x = int(input("Input X-Dimension (2 or greater): "))
+    #         y = int(input("Input Y-Dimension (2 or greater): "))
+    #         plies = int(input("Now, set the difficult of your AI Competitor by declaring how many plies ahead it will compute: "))
+    #         # Write string input validation
+    #         if x < 2 or y < 2 or plies < 2:
+    #             print("Dimension and ply values must be 2 or greater")
+    #         else:
+    #             break        
+    newGame = Game(2, 2, 0)
     newGame.start()
         
 
@@ -29,8 +29,8 @@ if __name__ == "__main__":
 
 
 # Testing
-from player import Player
-from board import Board
+# from player import Player
+# from board import Board
 
-newGame = Game(3, 3)
-newGame.start()
+# newGame = Game(3, 3)
+# newGame.start()
